@@ -1,9 +1,26 @@
-nombre:str = input('¿Cómo te llamas?\r\n')
+"""
+Módulo: interaccion_basica.py
+Descripción: Programa interactivo que calcula la edad de un usuario y verifica
+             si es mayor de edad para votar. Además, determina si un número
+             ingresado es par o impar.
+Autor: Giovanny Ariza Narváez
+Versión: 1.0
+Fecha de creación: 26 de mayo de 2026
+Uso: Ejecutar directamente con `python interaccion_basica.py`
+"""
+
+# `input()` siempre devuelve una cadena. La anotación `: str` indica el tipo esperado
+
+# Se agrega un espacio al final de la cadena, por convención PEP 8
+nombre:str = input('¿Cómo te llamas?\n')
+# Si el usuario escribe texto no numérico, se lanzará `ValueError`
 ano_nacimiento:int = int(input('¿En qué año naciste? '))
+ # Cálculo aproximado de la edad. No considera mes/día de nacimiento
 edad:int = 2026 - ano_nacimiento
 
 print(f'Hola {nombre}, tienes aproximadamente {edad} años de edad.')
 
+# Estructura condicional: evalúa si el usuario cumple la mayoría de edad legal
 if edad >= 18:
   print('Ya tienes edad para votar!')
 else:
@@ -11,9 +28,13 @@ else:
 
 # ------------------------------------------------------------------------------
 
-numero = int(input('Agrega un número y te diré si es par o impar.\r\n'))
+# Se solicita un número entero. El `\n` fuerza un salto de línea en la consola
+numero = int(input('Agrega un número y te diré si es par o impar.\n'))
 
-if numero % 2:
+# El operador módulo (%) devuelve el residuo de la división entera
+# En Python, cualquier número distinto de 0 se evalúa como `True` (truthy)
+# Por eso `if numero % 2:` funciona: si el residuo es 1 (impar) → True
+if numero % 2 != 0:
   print(f'El numero {numero} es impar')
 else:
   print(f'El número {numero} es par')
