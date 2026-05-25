@@ -1,9 +1,14 @@
-# Ejemplo sencillo
-contador = 0
+def simple_while() -> None:
+  # Ejemplo sencillo
+  contador = 0
 
-while contador <= 10:
-  print(f'Iteración: {contador}')
-  contador += 1
+  while contador <= 10:
+    print(f'Iteración: {contador}')
+    contador += 1
+
+# ------------------------------------------------------------------------------
+
+# simple_while()
 
 # ------------------------------------------------------------------------------
 
@@ -33,4 +38,53 @@ def main() -> None:
 
 # ------------------------------------------------------------------------------
 
-main()
+# main()
+
+# ------------------------------------------------------------------------------
+
+playlist = {} # Diccionario vacío
+playlist['canciones'] = [] # Lista vacía en el diccionario
+
+
+def mostrar_resumen() -> None:
+  print(f'Playlist: {playlist["nombre"]}\r\n')
+  print('Canciones:')
+
+  for cancion in playlist['canciones']:
+    print(cancion)
+
+# ------------------------------------------------------------------------------
+
+def agregar_canciones() -> None:
+  agregar_cancion:bool = True
+
+  while agregar_cancion:
+    nombre_playlist:str = playlist['nombre']
+    pregunta:str = f'\r\nAgrega canciones para la playlist {nombre_playlist}:\r\n'
+    pregunta += 'Escribe "x" para dejar de agregar canciones.\r\n'
+
+    cancion:str = input(pregunta)
+
+    if cancion == 'x':
+      agregar_cancion = False
+      mostrar_resumen()
+    else:
+      playlist['canciones'].append(cancion)
+
+# ------------------------------------------------------------------------------
+
+def app():
+  agregar_playlist:bool = True
+
+  while agregar_playlist:
+    nombre_playlist:str = input('¿Cómo deseas nombrar la playlist? ')
+
+    if nombre_playlist:
+      playlist['nombre'] = nombre_playlist
+      agregar_playlist = False
+
+      agregar_canciones()
+
+# ------------------------------------------------------------------------------
+
+app()
