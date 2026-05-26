@@ -60,7 +60,7 @@ def main() -> None:
 
   # Abrimos la conexión al archivo de la base de datos usando Context Manager ('with')
   # Esto garantiza que el archivo se cierre correctamente si hay un apagón o un error
-  with sqlite3.connect('./planta_industrial.db') as conexion_db:
+  with sqlite3.connect('./09_persistencia_databases/planta_industrial.db') as conexion_db:
     
     # Preparamos la base de datos creando la tabla
     inicializar_base_datos(conexion_db)
