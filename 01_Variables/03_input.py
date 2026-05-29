@@ -1,14 +1,3 @@
-"""
-Módulo: interaccion_basica.py
-Descripción: Programa interactivo que calcula la edad de un usuario y verifica
-             si es mayor de edad para votar. Además, determina si un número
-             ingresado es par o impar.
-Autor: Giovanny Ariza Narváez
-Versión: 1.0
-Fecha de creación: 26 de mayo de 2026
-Uso: Ejecutar directamente con `python interaccion_basica.py`
-"""
-
 # `input()` siempre devuelve una cadena. La anotación `: str` indica el tipo esperado
 
 # Se agrega un espacio al final de la cadena, por convención PEP 8
