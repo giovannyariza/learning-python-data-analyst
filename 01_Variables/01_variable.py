@@ -34,7 +34,7 @@ print(type(active_facility)) # class 'int'
 # Asignar diferentes valores a diferentes variables en una sola línea
 pressure, temperature, flow_rate = 145.7, 42.5, 1200.2
 
-print(f"Presión: {pressure}, Temperatura: {temperature}, Flujo: {flow_rate}")
+print(f"Pressure: {pressure}, Temperature: {temperature}, Flow Rate: {flow_rate}")
 
 # Asignar el mismo valor a múltiples variables simultáneamente
 lower_alarm_limit = upper_alarm_limit = 0.0
